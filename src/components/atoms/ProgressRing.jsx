@@ -37,10 +37,10 @@ const ProgressRing = ({ value, max, label, unit, color = "from-primary-400 to-pr
             strokeDashoffset={strokeDashoffset}
             className="progress-ring-circle transition-all duration-500 ease-out"
           />
-          <defs>
+<defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" className={`${color.split(' ')[0].replace('from-', 'text-')}`} stopColor="currentColor" />
-              <stop offset="100%" className={`${color.split(' ')[2].replace('to-', 'text-')}`} stopColor="currentColor" />
+              <stop offset="0%" className={`${color?.split(' ')?.[0]?.replace('from-', 'text-') || 'text-blue-400'}`} stopColor="currentColor" />
+              <stop offset="100%" className={`${color?.split(' ')?.[2]?.replace('to-', 'text-') || 'text-blue-600'}`} stopColor="currentColor" />
             </linearGradient>
           </defs>
         </svg>
